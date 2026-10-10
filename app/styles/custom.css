@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0D0E12;
+    --bg-elevated: #16181F;
+    --card: #1B1E27;
+    --border: #2A2D38;
+    --gold: #E3B23C;
+    --teal: #2DD4BF;
+    --text: #F2F0EA;
+    --text-dim: #9A9CA8;
+}
+
+html, body, [class*="css"] { font-family: 'Inter', sans-serif; color: var(--text); }
+.stApp { background: var(--bg); }
+
+h1, h2, h3 { font-family: 'Bebas Neue', 'Inter', sans-serif; letter-spacing: 0.02em; color: var(--text); }
+h1 { font-size: 3rem !important; }
+
+/* Hero section */
+.hero {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 3.5rem 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(180deg, rgba(13,14,18,0.35) 0%, rgba(13,14,18,0.95) 100%), var(--bg-elevated);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border);
+}
+.hero-title { font-size: 3.4rem; line-height: 1.05; margin: 0 0 0.6rem 0; }
+.hero-sub { color: var(--text-dim); font-size: 1.05rem; max-width: 620px; margin-bottom: 1.4rem; }
+.hero-badge {
+    display: inline-block; background: var(--gold); color: #14140F; font-weight: 700;
+    padding: 0.25rem 0.7rem; border-radius: 6px; font-size: 0.78rem; margin-bottom: 0.9rem;
+}
+
+/* Movie card */
+.movie-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.movie-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.movie-poster-fallback {
+    aspect-ratio: 2/3; width: 100%;
+    background: linear-gradient(160deg, #23263080, #14161c);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-dim); font-size: 2rem; text-align: center; padding: 0.5rem;
+}
+.movie-card-body { padding: 0.7rem 0.8rem 0.9rem 0.8rem; }
+.movie-title { font-weight: 600; font-size: 0.92rem; margin: 0 0 0.15rem 0; line-height: 1.25; }
+.movie-meta { color: var(--text-dim); font-size: 0.78rem; margin-bottom: 0.35rem; }
+.movie-score {
+    display: inline-block; background: rgba(227,178,60,0.14); color: var(--gold);
+    font-size: 0.72rem; font-weight: 700; padding: 0.1rem 0.5rem; border-radius: 5px;
+}
+.movie-explanation { color: var(--text-dim); font-size: 0.72rem; margin-top: 0.4rem; font-style: italic; }
+
+/* Metric card */
+.metric-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.1rem 1.3rem; text-align: left;
+}
+.metric-value { font-size: 2.1rem; font-weight: 700; color: var(--gold); font-family: 'Bebas Neue'; }
+.metric-label { color: var(--text-dim); font-size: 0.82rem; }
+
+/* Badges */
+.badge { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 600; margin-right: 0.3rem; }
+.badge-historical { background: rgba(45,212,191,0.15); color: var(--teal); }
+.badge-current { background: rgba(227,178,60,0.15); color: var(--gold); }
+.badge-coldstart { background: rgba(155,120,255,0.15); color: #B79CFF; }
+
+.empty-state { text-align: center; color: var(--text-dim); padding: 2.5rem 1rem; border: 1px dashed var(--border); border-radius: 12px; }
+
+hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 1.6rem 0; }
