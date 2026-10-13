@@ -1,0 +1,86 @@
+{
+  "ml-32m": {
+    "dataset": "ml-32m",
+    "release_note": "2023-10-13 (last updated)",
+    "files": {
+      "ratings.csv": {
+        "rows": 32000204,
+        "columns": [
+          "userId",
+          "movieId",
+          "rating",
+          "timestamp"
+        ]
+      },
+      "movies.csv": {
+        "rows": 87585,
+        "columns": [
+          "movieId",
+          "title",
+          "genres"
+        ]
+      },
+      "tags.csv": {
+        "rows": 2000072,
+        "columns": [
+          "userId",
+          "movieId",
+          "tag",
+          "timestamp"
+        ]
+      },
+      "links.csv": {
+        "rows": 87585,
+        "columns": [
+          "movieId",
+          "imdbId",
+          "tmdbId"
+        ]
+      }
+    },
+    "unique_users": 200948,
+    "unique_movies_rated": 84432,
+    "unique_movies_catalog": 87585,
+    "num_ratings": 32000204,
+    "num_tags": 2000072,
+    "rating_min": 0.5,
+    "rating_max": 5.0,
+    "rating_mean": 3.540395498275757,
+    "timestamp_min": "1995-01-09",
+    "timestamp_max": "2023-10-13",
+    "sparsity_pct": 99.8182,
+    "validation": {
+      "schema_issues": [],
+      "duplicate_user_movie_ratings": 0,
+      "duplicate_movie_ids": 0,
+      "null_counts": {
+        "ratings": {
+          "userId": 0,
+          "movieId": 0,
+          "rating": 0,
+          "timestamp": 0,
+          "ts": 0
+        },
+        "movies": {
+          "movieId": 0,
+          "title": 0,
+          "genres": 0,
+          "year": 617,
+          "clean_title": 0,
+          "genres_list": 0
+        },
+        "tags": {
+          "userId": 0,
+          "movieId": 0,
+          "tag": 17,
+          "timestamp": 0
+        },
+        "links": {
+          "movieId": 0,
+          "imdbId": 0,
+          "tmdbId": 124
+        }
+      }
+    }
+  }
+}
